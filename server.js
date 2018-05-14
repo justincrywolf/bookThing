@@ -15,6 +15,8 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Start the API server
 app.listen(PORT, function() {
